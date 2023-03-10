@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+}
+:root{
+  --textColor: #000;
+  --bg: white;
+  --logo: darkblue;
+  --bgSoft: #f6f3f3;
+  --textColorSoft: #555;
+  --border: lightgray;
+}
+
+.icon{
+  color: var(--logo);
+}
+
+.link{
+  text-decoration: none;
+}

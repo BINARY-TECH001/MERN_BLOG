@@ -1,0 +1,12 @@
+.home{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======= Mobile ======= */
+
+@media (max-width: 705px){
+    .home{
+        flex-direction: column;
+    }
+}

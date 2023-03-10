@@ -1,0 +1,195 @@
+
+.topBar{
+    width: 100vw;
+    height: 5em;
+    background-color: var(--bg);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans', sans-serif;
+    opacity: .9;
+    box-shadow: 1px 1px 6px var(--textColorSoft);
+    z-index: 999;
+}
+
+.topListItem:hover{
+    border-bottom: 2px solid var(--logo);
+    font-size: 1.6em;
+    transition: all .5s ease-in-out;
+}
+
+.topLeft, 
+.topRight{
+    flex: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topRight{
+    gap: 1em;
+}
+
+.topCenter{
+    flex: 6;
+}
+
+.topIcon{
+    font-size: 1.2em;
+    margin-right: 1em;
+    cursor: pointer;
+}
+
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+
+.topList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topListItem{
+    margin-right: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--logo);
+    cursor: pointer;
+}
+
+.topListItem:last-child{
+    color: red;
+}
+.topListItem:last-child:hover{
+    border-bottom: 1px solid red;
+}
+
+.topSearchIcon{
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.hamburger{
+    display: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 1.2em;
+}
+.darkMode{
+    display: none;
+}
+.topCenter ul li.active::after{
+    content: ' ';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+
+.closeIcon{
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0 .5em;
+}
+
+/* ======= Mobile ======= */
+
+@media (max-width: 705px){
+    .topCenter{
+       display: none;
+    }
+
+    .topBar{
+        width: 100%;
+    }
+
+    .topRight{
+    justify-content: flex-end;
+        flex: 1;
+    }
+
+    .topLeft{
+        flex: 1;
+    }
+    .hamburger{
+        font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 1.2em;
+        display: block;
+    }
+
+    .topCenter{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: var(--bg);
+        width: 0px;
+        height: calc(100vh);
+        transition: all .8s ease-in;
+        overflow: hidden;
+    }
+
+    .topCenter.active{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .darkMode{                                              
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    .darkMode span{
+        margin-left: 2em;
+        color: var(--logo);
+    }
+
+    .darkMode button{
+        padding: .6em;
+        width: auto;
+        outline: none;
+        border: none;
+        background-color: var(--logo);
+        color: var(--bg);
+        border-radius: .4em;
+        margin-right: 2em;
+        letter-spacing: 1px;
+    }
+
+    .topList{
+        margin-top: 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 4em;
+    }
+
+    .topListItem{
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+    .topListItem:hover{
+        border-bottom: 2px solid var(--logo);
+        font-size: 1.6em;
+        transition: all .5s ease-in-out;
+    }
+}
